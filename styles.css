@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   /*Dark Mode Theme*/
 
@@ -411,4 +412,419 @@ body.dark-mode .white-btn {
         padding: 0px 20px;
         gap: 1rem;
     }
+=======
+:root {
+  /*Dark Mode Theme*/
+
+  --dark-bg: #050A1D;
+  --dark-bg-bottom: #0A1542;
+  --dark-surface: #1F2535;
+  --dark-text-primary: #FFFFFF;
+  --dark-text-secondary: #B8BBC4;
+  --dark-accent-red: #F35C55;
+  --dark-pill-active: #F35C55;
+  --dark-box-bg: rgba(148, 163, 184, 0.1);
+
+  --dark-border: #4A5264;
+  --dark-toggle-inactive: #4A5264;
+
+  /* Light Mode Theme */
+
+  --light-bg: #E2E8F0;
+  --light-surface: #FFFFFF;
+  --light-text-primary: #1A202C;
+  --light-text-secondary: #718096;
+  --light-accent-red: #E53E3E;
+
+  --box-shadow: 0 0 2px 0.5px rgba(0, 0, 0, 0.2);
+  --dark-box-shadow: inset 0 0 1px 0.5px rgba(255, 255, 255, 0.6);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(
+        to bottom,
+        var(--light-bg),
+        var(--light-surface)
+    );
+}
+
+
+/* Dark Mode */
+
+body.dark-mode {
+    background: linear-gradient(
+        to bottom,
+        var(--dark-bg) 0%,
+        var(--dark-bg-bottom) 100%
+    );
+}
+
+.container {
+    padding: 1.2rem 0.8rem;
+}
+
+.search-bar {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: none;
+    left: 0;
+    margin: 0 5px;
+}
+
+.search-extension {
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    background-color: var(--light-surface);
+    border-radius: 0.7rem;
+    padding: 8px 8px;
+}
+
+body.dark-mode .extension-logo{
+    color: white;
+}
+
+/* Dark Mode Search */
+
+body.dark-mode .search-extension {
+    background-color: var(--dark-surface);
+    box-shadow: none;
+}
+
+body.dark-mode .search-bar {
+    background-color: var(--dark-surface);
+    color: var(--dark-text-primary);
+}
+
+body.dark-mode .search-bar::placeholder {
+    color: var(--dark-text-secondary);
+}
+
+.extension-logo {
+    left: 3rem;
+}
+
+.theme-icon-container {
+    background-color: var(--light-bg);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+body.dark-mode .theme-icon-container {
+    background-color: var(--dark-toggle-inactive);
+    border: none;
+}
+
+body.dark-mode .theme-icon-container:focus {
+    outline: var(--dark-accent-red)
+}
+
+.theme-icon {
+    margin: auto;
+}
+
+@font-face {
+    font-family: 'NotoSans';
+    src: url('assets/fonts/static/NotoSans-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'NotoSans';
+    src: url('assets/fonts/static/NotoSans-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'NotoSans';
+    src: url('assets/fonts/static/NotoSans-Bold.ttf');
+    font-weight: 700;
+}
+
+
+
+.filter-btn button {
+    padding: 0.5rem 0.9rem;
+    margin: auto 0.2rem;
+    border: none;
+    background-color: var(--light-surface);
+    border-radius: 3rem;
+    box-shadow: var(--box-shadow);
+    font-family: 'NotoSans';
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.filter-btn button:active {
+    background-color: var(--light-accent-red);
+    color: var(--light-text-primary);
+}
+
+.control-btns button:hover,
+.filter-btn button:hover {
+    background-color: var(--light-accent-red);
+    color: var(--light-surface);
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+}
+
+.filter-btn button:focus,
+.control-btns .remove-btn:focus {
+    outline: 2px solid var(--light-accent-red);
+    outline-offset: 2px;
+}
+
+.filter-btn button.selected {
+    background-color: var(--light-accent-red);
+    color: var(--light-surface);
+}
+
+
+/* Dark Mode Filter Buttons */
+
+body.dark-mode .filter-btn button {
+    background-color: var(--dark-surface);
+    color: var(--dark-text-primary);
+    border: 1px solid var(--dark-border);
+    box-shadow: none;
+}
+
+body.dark-mode .filter-btn button.selected {
+    background-color: var(--dark-accent-red);
+    color: var(--dark-text-primary);
+    border: none;
+}
+
+body.dark-mode .filter-btn button:hover {
+    background-color: var(--dark-toggle-inactive);
+    color: var(--dark-text-primary);
+    border: none;
+}
+
+.extensions-list header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 5px;
+}
+
+.extensions-list header h2 {
+    color: var(--light-text-primary);
+    font-size: 1.5rem;
+    font-family: 'NotoSans';
+    font-weight: 700;
+}
+
+
+/* Dark Mode Header */
+
+body.dark-mode .extensions-list header h2 {
+    color: var(--dark-text-primary);
+}
+
+.extensions-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.extension-box {
+    background-color: var(--light-surface);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 0.8rem;
+    display: flex;
+    flex: 0 0 calc((100% - 2rem) / 4);
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 250px;
+    min-width: 250px;
+    color: var(--light-text-primary);
+}
+
+
+/* Dark Mode Cards */
+
+body.dark-mode .extension-box {
+    background-color: var(--dark-surface);
+    color: var(--dark-text-primary);
+    box-shadow: none;
+    border: 1px solid var(--dark-border);
+}
+
+.extension-box article {
+    display: flex;
+    justify-content: center;
+}
+
+.extension-box article img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 5px;
+}
+
+.extension-box article h3 {
+    font-family: 'NotoSans';
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.extension-box article p {
+    font-family: 'NotoSans';
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+
+/* Dark Mode Card Description */
+
+body.dark-mode .extension-box article p {
+    color: var(--dark-text-secondary);
+}
+
+.control-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.control-btns .remove-btn {
+    padding: 7px;
+    font-family: 'NotoSans';
+    font-weight: 500;
+    border-radius: 1.1rem;
+    border: none;
+    box-shadow: var(--box-shadow);
+    background-color: var(--light-surface);
+    color: var(--light-text-primary);
+    cursor: pointer;
+}
+
+
+/* Dark Mode Remove Button */
+
+body.dark-mode .control-btns .remove-btn {
+    background-color: var(--dark-surface);
+    color: var(--dark-text-primary);
+    border: 1px solid var(--dark-border);
+    box-shadow: none;
+}
+
+body.dark-mode .control-btns .remove-btn:hover {
+    background-color: var(--dark-accent-red);
+    color: var(--dark-text-primary);
+    border-color: var(--dark-accent-red);
+}
+
+.remove-btn,
+.toggle-on-off-btn {
+    background-color: var(--light-bg);
+}
+
+.toggle-on-off-btn {
+    box-shadow: var(--box-shadow);
+    width: 2.6rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.toggle-on-off-btn.active-btn {
+    background-color: var(--light-accent-red);
+}
+
+.white-btn {
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    border: none;
+    margin: auto 2px;
+    background-color: var(--light-surface);
+    position: relative;
+    top: -6.8px;
+    right: -8px;
+    transition: ease-in-out 0.3s;
+}
+
+.toggle-on-off-btn.inactive-btn {
+    background-color: var(--light-bg);
+    box-shadow: var(--box-shadow);
+}
+
+.toggle-on-off-btn.inactive-btn .white-btn {
+    right: 8px;
+}
+
+body.dark-mode .remove-btn,
+body.dark-mode .toggle-on-off-btn {
+    background-color: var(--dark-toggle-inactive);
+}
+
+body.dark-mode .toggle-on-off-btn.active-btn {
+    background-color: var(--dark-accent-red);
+}
+
+body.dark-mode .toggle-on-off-btn.inactive-btn {
+    background-color: var(--dark-toggle-inactive);
+    box-shadow: none;
+}
+
+body.dark-mode .white-btn {
+    background-color: #FFFFFF;
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .extensions-list header {
+        display: block;
+        margin: 1.2rem auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .extensions-list header h2 {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .extensions-list-container {
+        width: 100%;
+    }
+
+    .extension-box {
+        min-width: 100%;
+        height: 170px;
+        padding: 15px;
+    }
+
+    .article-text {
+        font-size: 1.9rem;
+        padding: 0px 20px;
+        gap: 1rem;
+    }
+>>>>>>> 69d3539b5347ecca9bb861197ee3719eb46c70a4
 }

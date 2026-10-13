@@ -37,7 +37,11 @@ Users should be able to:
 ### Links
 
 - Solution URL: [View my solution](MY_FRONTEND_MENTOR_SOLUTION_URL)
+<<<<<<< HEAD
 - Live Site URL: [View live site](https://naeemah-tech.github.io/Addon-Manager/)
+=======
+- Live Site URL: [View live site](MY_VERCEL_URL)
+>>>>>>> 69d3539b5347ecca9bb861197ee3719eb46c70a4
 
 ## My process
 
